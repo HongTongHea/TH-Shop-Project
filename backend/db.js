@@ -4,7 +4,7 @@ const connection = msql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'my_database'
+    database: 'db_th_shop'
 });
 
 connection.connect((err) => {
