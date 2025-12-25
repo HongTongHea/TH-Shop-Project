@@ -8,8 +8,8 @@ exports.getProducts = (req, res) => {
 };
 
 exports.addProduct = (req, res) => {
-  const { name, price } = req.body;
-  const newProduct = { name, price };
+  const { name, brand, description, price, stock_quantity, category, image, barcode, discount } = req.body;
+  const newProduct = { name, brand, description, price, stock_quantity, category, image , barcode, discount};
   db.query("INSERT INTO products SET ?", newProduct, (err, result) => {
     if (err) return res.status(500).json({ error: err });
     res
